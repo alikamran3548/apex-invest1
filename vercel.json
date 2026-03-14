@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd artifacts/apex-investor && pnpm install --no-frozen-lockfile && pnpm run build",
+  "outputDirectory": "artifacts/apex-investor/dist",
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/artifacts/apex-investor/dist/index.html" }
+  ]
+}
